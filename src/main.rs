@@ -2,7 +2,7 @@ use clap::ArgMatches;
 
 use codicon::*;
 
-use ::sev::api::{Firmware, Status};
+use ::sev::firmware::{Firmware, Status};
 use ::sev::certs::*;
 
 use std::process::exit;
@@ -171,7 +171,7 @@ mod reset {
 }
 
 mod show {
-    use ::sev::api::Flags;
+    use ::sev::firmware::Flags;
     use super::*;
 
     pub fn cmd(matches: &ArgMatches) -> ! {
@@ -400,7 +400,7 @@ mod serve {
 }
 
 mod rotate {
-    use ::sev::api::Flags;
+    use ::sev::firmware::Flags;
     use super::*;
 
     pub fn cmd(matches: &ArgMatches) -> ! {
