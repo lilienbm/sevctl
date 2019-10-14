@@ -23,5 +23,7 @@ matrix:
   fast_finish: true
 install:
   - rustup component add rustfmt
+  - cargo install --force cargo-audit
 script:
   - cargo fmt -- --check
+  - cargo audit
